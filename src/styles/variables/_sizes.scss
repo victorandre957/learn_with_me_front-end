@@ -1,0 +1,13 @@
+/*
+  Devices sizes:
+
+  Defined based on this search: https://gbksoft.com/blog/common-screen-sizes-for-responsive-web-design/
+  these values are used to determine if screen is ultra, desktop, hd-desktop, md-desktop, tablet or mobile
+  NOTE: this is used on responsiveness helpers too, so be carefully when changing this
+*/
+$mobile-devices: 0px; // min to be a mobile
+$tablet-devices: 600px; // min to be a tablet
+$md-desktop-devices: 1280px; // min to be a md-desktop (most used)
+$hd-desktop-devices: 1400px; // min to be a hd-desktop
+$full-desktop-devices: 1920px; // min to be a full-desktop
+$ultra-desktop-devices: 2000px; // min to be a ultra-desktop

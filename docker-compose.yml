@@ -1,0 +1,14 @@
+version: '3'
+services:
+  svelte:
+    env_file:
+      - .env
+    container_name: svelte-learn-with-me
+    image: node:18.13.0
+    working_dir: /app
+    volumes:
+      - ./:/app
+    # In host mode is not needed bind ports
+    network_mode: host
+    user: 1000:1000
+    tty: true

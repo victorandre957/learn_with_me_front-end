@@ -1,0 +1,23 @@
+$weights: 300, 400, 600, 700, 800;
+$prefix: OpenSans;
+$font-name: 'Open Sans';
+
+@each $weight in $weights {
+  @font-face {
+    font-family: "#{$font-name}";
+    src: url("../../assets/fonts/OpenSans/#{$prefix}-#{$weight}.ttf");
+    src: url('../../assets/fonts/OpenSans/#{$prefix}-#{$weight}.woff2') format('woff2'),
+         url('../../assets/fonts/OpenSans/#{$prefix}-#{$weight}.woff') format('woff');
+    font-weight: $weight;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "#{$font-name}";
+    src: url("../../assets/fonts/OpenSans/#{$prefix}-#{$weight}i.ttf");
+    src: url('../../assets/fonts/OpenSans/#{$prefix}-#{$weight}i.woff2') format('woff2'),
+         url('../../assets/fonts/OpenSans/#{$prefix}-#{$weight}i.woff') format('woff');
+    font-weight: $weight;
+    font-style: italic;
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "eslint.format.enable": true,
+  "eslint.alwaysShowStatus": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "eslint.probe": ["javascript", "typescript", "html", "markdown", "svelte"],
+  "eslint.validate": ["javascript", "typescript", "html", "markdown", "svelte"],
+  "eslint.lintTask.enable": true,
+  "editor.formatOnSave": true
+}
