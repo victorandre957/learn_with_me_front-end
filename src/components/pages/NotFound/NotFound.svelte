@@ -1,11 +1,12 @@
 <h1>Not Found</h1>
 <p>This route doesn't exist.</p>
 
-<style>
+<style lang="scss">
   h1 {
-    color: #ff0040;
+    color: red;
     text-transform: uppercase;
     font-size: 4em;
     font-weight: 100;
   }
+
 </style>
