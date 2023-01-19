@@ -8,10 +8,11 @@
     "start": "sirv public --no-clear",
     "check": "svelte-check --tsconfig ./tsconfig.json --threshold error",
     "lint": "npx eslint ./",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "start-storybook -p 5000",
     "build-storybook": "build-storybook",
     "test": "jest",
-    "check-all": "npm ci; npm run test; npm run check; npm run lint"
+    "check-all": "npm ci; npm run test; npm run check; npm run lint",
+    "docker:up": "docker-compose run --service-ports svelte bash"
   },
   "devDependencies": {
     "@babel/core": "^7.20.5",

@@ -8,7 +8,6 @@
     "streetsidesoftware.code-spell-checker-portuguese-brazilian",
 
     // git extensions
-    "mhutchie.git-graph",
     "eamodio.gitlens",
 
     // svelte

@@ -44,10 +44,10 @@ We will develop inside a container with vscode, so you will need:
 
 1. Copy `./.env.example` to `./.env`
 2. Execute `docker-compose down --volumes --remove-orphans`
-3. Run `docker-compose run svelte bash`
+3. Run `docker-compose run --service-ports svelte bash`
 4. Inside the container run:
     ```
-    yarn install
+    yarn ci
     ```
     next you can run any of these commands:
     ```
