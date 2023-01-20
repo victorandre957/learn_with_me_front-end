@@ -1,4 +1,4 @@
-import type { ApiTypes } from "../types/index";
+import type * as ApiTypes from "../types/api";
 import { isTruthy } from "../../truthy";
 import { getErrorCode } from "./generalAdapter";
 

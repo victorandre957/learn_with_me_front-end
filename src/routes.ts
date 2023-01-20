@@ -3,17 +3,12 @@ import type { ConditionsFailedEvent } from "svelte-spa-router";
 import { replace } from "svelte-spa-router";
 
 import Home from "./components/pages/Home/Home.svelte";
-import Lorem from "./components/pages/Lorem/Lorem.svelte";
 import NotFound from "./components/pages/NotFound/NotFound.svelte";
 
 const routes = new Map();
 
 routes.set("/", wrap({
   component: Home,
-}));
-
-routes.set("/Lorem", wrap({
-  component: Lorem,
 }));
 
 routes.set("*", NotFound);

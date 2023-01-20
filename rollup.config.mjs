@@ -11,6 +11,7 @@ import minify from "postcss-minify";
 import styles from "rollup-plugin-styles";
 import url from "@rollup/plugin-url";
 import injectProcessEnv from "rollup-plugin-inject-process-env";
+import { spawn } from "child_process";
 
 import copy from "rollup-plugin-copy";
 import del from "rollup-plugin-delete";
@@ -31,7 +32,7 @@ function serve() {
   return {
     writeBundle() {
       if (server) return;
-      server = require("child_process").spawn("npm", ["run", "start", "--", "--dev", ...process.argv.slice(4)], {
+      server = spawn("npm", ["run", "start", "--", "--dev", ...process.argv.slice(4)], {
         stdio: ["ignore", "inherit", "inherit"],
         shell: true,
       });
@@ -74,7 +75,7 @@ const config = {
 
     url({
       limit: 0,
-      destDir: "public/assets",
+      destDir: "public/build/assets",
       publicPath: "assets/",
       fileName: "[name]-[hash][extname]",
     }),

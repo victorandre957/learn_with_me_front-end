@@ -1,6 +1,6 @@
 <script lang="ts">
   import { location, querystring } from "svelte-spa-router";
-  import MyComponent from "../../MyComponent/MyComponent.svelte";
+
   import Luna from "../../../assets/img/Luna.jpg";
 
 </script>
@@ -17,8 +17,6 @@
   <a href="#/lorem/2">Lorem ipsum</a>
 </p>
 
-
-<MyComponent />
 
 <p>Olha a location: {$location}</p>
 <p>Olha a query string: {$querystring}</p>

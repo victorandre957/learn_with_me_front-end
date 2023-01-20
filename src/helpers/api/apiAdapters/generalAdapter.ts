@@ -1,4 +1,4 @@
-import type { ApiTypes } from "../types/index";
+import type * as ApiTypes from "../types/api";
 
 type TErrorMessage = {
   title: string,

@@ -1,7 +1,5 @@
 import { isTruthy } from "../../truthy";
-import { titleError, messageError } from "./translateMessages";
-import type { TTitle, TMessage } from "./types";
-import type { ApiTypes } from "../types/index";
+import type * as ApiTypes from "../types/api";
 
 type TStrapiError = {
   "status": number, // HTTP status
@@ -10,50 +8,9 @@ type TStrapiError = {
   "details": JsonLike, // error info specific to the error type
 }
 
-type TValidationErrorDetails = {
-  errors: {
-    path: string[],
-    name: string,
-    message: string
-  }[]
-}
-
 function parseError(err: TStrapiError): { title: string, message: string } {
-  let title = err.name;
-  let { message } = err;
-
-  if (titleError[title as TTitle] !== undefined) {
-    title = titleError[title as TTitle];
-  }
-
-  if (JSON.stringify(err.details) === "{}") {
-    // skip not translated message
-    if (messageError[message as TMessage]) {
-      message = messageError[message as TMessage];
-    }
-  } else {
-    const { errors } = err.details as TValidationErrorDetails;
-    const objMessages = {} as Record<string, string[]>;
-
-    errors.forEach((error) => {
-      let msg = error.message;
-      if (messageError[error.message as TMessage] !== undefined) {
-        msg = messageError[error.message as TMessage];
-      }
-      const item = error.path[0];
-
-      if (objMessages[msg] === undefined) {
-        objMessages[msg] = [item];
-      } else {
-        objMessages[msg].push(item);
-      }
-    });
-
-    message = (JSON.stringify(objMessages, null, " "))
-      .replace(/"/g || /'/g, "")
-      .replace(/[-/\\^$*+?.()|{}]/g, "")
-      .replace(/,/, "\n");
-  }
+  const title = err.name;
+  const { message } = err;
 
   return { title, message };
 }
