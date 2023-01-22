@@ -1,6 +1,7 @@
 <script lang="ts">
   import { Form, Input, Button } from "szot-ui-experimental";
   import Card from "../../Card/Card.svelte";
+  import { validEmail } from "./loginFunctions";
 
   const loginData = {
     email: "",
@@ -16,12 +17,13 @@
     </header>
 
     <div class="form">
-      <Form>
+      <Form on:submit>
         <Input
           name="email"
           label="Email"
           type="email"
           bind:value={loginData.email}
+          validationFn={validEmail}
         />
         <Input
           name="senha"
