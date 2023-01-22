@@ -37,4 +37,10 @@ module.exports = {
   core: {
     builder: 'webpack5',
   },
+  refs: {
+    'szot-ui': {
+      title: "Szot UI",
+      url: "https://team-tecnologia.gitlab.io/public-pkgs/szot-ui/",
+    }
+  }
 }

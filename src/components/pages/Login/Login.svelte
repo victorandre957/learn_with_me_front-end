@@ -51,12 +51,8 @@
     --szot-input-label-color: black;
     --szot-input-border-radius: 1.5rem;
     --szot-input-border: 0.125rem;
-    --szot-input-placeholder-color: gray;
     --szot-input-padding: 1rem;
-    --szot-input-label-padding: 0.3125rem;
-    --szot-button-color: black;
     --szot-button-background-color: rgba(105, 23, 105, 0.616);
-    --szot-button-border-radius: 1.5rem;
 
     header {
       padding: 1.5rem 0;
